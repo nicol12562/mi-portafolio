@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos Generales */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+      color: white;
+      text-align: center;
+    }
+
+    /* Header */
+    header {
+      padding: 20px 20px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: white;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Barra de Navegación Fija */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff4b2b;
+    }
+
+    /* Contenido Principal */
+    .content {
+      padding: 80px 20px 40px; /* Ajustamos el padding superior para evitar superposición con la barra */
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff416c;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    /* Barras de Progreso */
+    .skills {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      background: #333;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 20px;
+      position: relative;
+    }
+
+    .progress {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      transition: width 1.5s ease-in-out;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #bbb;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .content {
+        padding: 60px 20px 40px; /* Ajustamos el padding superior para móviles */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🚀 Bienvenido a mi Portafolio</h1>
+    <p>Desarrollador | Aprendiendo y mejorando cada día mis habilidades</p>
+  </header>
+
+  <!-- Navegación Fija -->
+  <nav>
+    <ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#desarrollo-web">Desarrollo Web</a></li>
+      <li><a href="#lenguajes">Lenguajes y Tecnologías</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main>
+    <!-- Sobre Mí -->
+    <section class="content" id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Me apasiona la tecnología y el desarrollo web. Siempre busco aprender y mejorar mis habilidades.</p>
+    </section>
+
+    <!-- Desarrollo Web -->
+    <section class="content" id="desarrollo-web">
+      <h2>Desarrollo Web</h2>
+      <div class="skills">
+        <div class="skill">
+          <span class="skill-name">HTML - Avanzado 90%</span>
+          <div class="progress-bar">
+            <div class="progress" data-percent="90"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">CSS - Avanzado 89%</span>
+          <div class="progress-bar">
+            <div class="progress" data-percent="89"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">JavaScript - Avanzado 87%</span>
+          <div class="progress-bar">
+            <div class="progress" data-percent="87"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lenguajes y Tecnologías -->
+    <section class="content" id="lenguajes">
+      <h2>Lenguajes y Tecnologías</h2>
+      <div class="skills">
+        <div class="skill">
+          <span class="skill-name">Python - Intermedio 60%</span>
+          <div class="progress-bar">
+            <div class="progress" data-percent="60"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Java - Intermedio 40%</span>
+          <div class="progress-bar">
+            <div class="progress" data-percent="40"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">SQL - Intermedio 59%</span>
+          <div class="progress-bar">
+            <div class="progress" data-percent="59"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="content" id="proyectos">
+      <h2>Proyectos</h2>
+      <p><strong>🚀 Hosting de Juegos</strong> - En proceso...</p>
+      <p>Es un server en la nube de juegos para PC de bajos recursos y con un buen servicio al cliente.</p>
+    </section>
+
+    <!-- Contacto -->
+    <section class="content" id="contacto">
+      <h2>Contacto</h2>
+      <p>📩 Correo: <a href="mailto:tucorreo@gmail.com">tucorreo@gmail.com</a></p>
+      <p>📌 LinkedIn: <a href="#">Mi perfil</a></p>
+      <p>👨‍💻 GitHub: <a href="#">Ver proyectos</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>✨ Creado por Gonzalo | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+
+  <!-- Script para animar barras de progreso -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const progressBars = document.querySelectorAll(".progress");
+      progressBars.forEach(bar => {
+        const percent = bar.getAttribute("data-percent");
+        bar.style.width = percent + "%";
+      });
+    });
+  </script>
+</body>
+</html>
